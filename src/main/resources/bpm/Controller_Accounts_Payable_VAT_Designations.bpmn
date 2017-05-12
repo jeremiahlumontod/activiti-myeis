@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:g="http://www.jboss.org/drools/flow/gpd" xmlns:tns="http://www.jboss.org/drools" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.mvel.org/2.0" id="Definition" targetNamespace="http://www.jboss.org/drools" typeLanguage="http://www.java.com/javaTypes" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+
+  
+
+  
+
+
+	
+
+	
+
+	
+<process id="Controller_Accounts_Payable_VAT_Designations" isExecutable="true" name="Controller_Accounts_Payable_VAT_Designations" processType="Private" tns:packageName="Controller_Accounts_Payable_VAT_Designations">
+		<startEvent id="_1" name="start-state1"/>
+		<userTask id="_2" name="1 Controller">
+			<ioSpecification>
+				<dataInput id="_2_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_2_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_2_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_2_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_3" name="2 Controller">
+			<ioSpecification>
+				<dataInput id="_3_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_3_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_3_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_3_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_4" name="3 Controller">
+			<ioSpecification>
+				<dataInput id="_4_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_4_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_4_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_4_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_5" name="4 Accounts Payable Supervisor">
+			<ioSpecification>
+				<dataInput id="_5_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_5_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_5_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_5_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_6" name="5 Accounts Payable Supervisor">
+			<ioSpecification>
+				<dataInput id="_6_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_6_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_6_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_6_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_7" name="6 Accounts Payable Supervisor">
+			<ioSpecification>
+				<dataInput id="_7_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_7_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_7_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_7_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<endEvent id="_8" name="end-state1"/>
+		<sequenceFlow id="_1-_2" sourceRef="_1" targetRef="_2"/>
+		<sequenceFlow id="_2-_3" sourceRef="_2" targetRef="_3"/>
+		<sequenceFlow id="_3-_4" sourceRef="_3" targetRef="_4"/>
+		<sequenceFlow id="_4-_5" sourceRef="_4" targetRef="_5"/>
+		<sequenceFlow id="_5-_6" sourceRef="_5" targetRef="_6"/>
+		<sequenceFlow id="_6-_7" sourceRef="_6" targetRef="_7"/>
+		<sequenceFlow id="_7-_8" sourceRef="_7" targetRef="_8"/>
+	</process>
+	<BPMNDiagram xmlns="http://www.omg.org/spec/BPMN/20100524/DI">
+		<BPMNPlane bpmnElement="Controller_Accounts_Payable_VAT_Designations">
+			<BPMNShape bpmnElement="_1">
+				<Bounds height="36" width="132" x="442" y="21" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_2">
+				<Bounds height="36" width="132" x="416" y="89" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_3">
+				<Bounds height="36" width="132" x="415" y="155" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_4">
+				<Bounds height="36" width="132" x="430" y="224" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_5">
+				<Bounds height="36" width="232" x="399" y="285" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_6">
+				<Bounds height="36" width="241" x="421" y="341" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_7">
+				<Bounds height="36" width="229" x="426" y="395" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_8">
+				<Bounds height="36" width="132" x="439" y="461" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNEdge bpmnElement="_1-_2">
+				<waypoint x="508" y="508" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="482" y="482" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_2-_3">
+				<waypoint x="482" y="482" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="481" y="481" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_3-_4">
+				<waypoint x="481" y="481" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="496" y="496" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_4-_5">
+				<waypoint x="496" y="496" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="515" y="515" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_5-_6">
+				<waypoint x="515" y="515" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="541" y="541" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_6-_7">
+				<waypoint x="541" y="541" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="540" y="540" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_7-_8">
+				<waypoint x="540" y="540" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="505" y="505" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+		</BPMNPlane>
+	</BPMNDiagram>
+</definitions>

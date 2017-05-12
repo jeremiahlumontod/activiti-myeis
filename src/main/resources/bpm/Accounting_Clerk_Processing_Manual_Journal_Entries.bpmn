@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <process processType="Private" isExecutable="true" id="Accounting_Clerk_Processing_Manual_Journal_Entries" name="Accounting_Clerk_Processing_Manual_Journal_Entries" tns:packageName="Accounting_Clerk_Processing_Manual_Journal_Entries" >
+
+    <!-- nodes -->
+    <startEvent id="_1" name="start-state1" />
+    <userTask id="_2" name="1 General Accounting Manager" >
+      <ioSpecification>
+        <dataInput id="_2_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_2_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_2_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_2_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <exclusiveGateway id="_3" name="new account needs to be established" gatewayDirection="Diverging" />
+    <userTask id="_4" name="General Ledger Chart of Accounts Maintenance" >
+      <ioSpecification>
+        <dataInput id="_4_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_4_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_4_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_4_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <exclusiveGateway id="_5" name="an update by the Originator is required" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_6" name="journal entry has already been posted" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_7" name="Controller's approval is required" gatewayDirection="Diverging" />
+    <userTask id="_8" name="2 General Accounting Manager" >
+      <ioSpecification>
+        <dataInput id="_8_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_8_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_8_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_8_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_9" name="3 General Accounting Manager" >
+      <ioSpecification>
+        <dataInput id="_9_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_9_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_9_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_9_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_10" name="4 Originator" >
+      <ioSpecification>
+        <dataInput id="_10_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_10_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_10_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_10_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_11" name="5 Originator" >
+      <ioSpecification>
+        <dataInput id="_11_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_11_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_11_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_11_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_12" name="6 General Accounting Manager" >
+      <ioSpecification>
+        <dataInput id="_12_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_12_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_12_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_12_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_13" name="7 Controller" >
+      <ioSpecification>
+        <dataInput id="_13_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_13_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_13_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_13_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <exclusiveGateway id="_14" name="update by the Originator is required" gatewayDirection="Diverging" />
+    <userTask id="_15" name="8 Controller" >
+      <ioSpecification>
+        <dataInput id="_15_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_15_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_15_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_15_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_17" name="10 Controller" >
+      <ioSpecification>
+        <dataInput id="_17_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_17_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_17_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_17_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_16" name="9 Controller" >
+      <ioSpecification>
+        <dataInput id="_16_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_16_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_16_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_16_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_19" name="12 Controller" >
+      <ioSpecification>
+        <dataInput id="_19_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_19_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_19_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_19_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_18" name="11 Controller" >
+      <ioSpecification>
+        <dataInput id="_18_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_18_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_18_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_18_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <exclusiveGateway id="_21" name="this is a reversing journal entry" gatewayDirection="Diverging" />
+    <userTask id="_20" name="13 Accounting Clerk" >
+      <ioSpecification>
+        <dataInput id="_20_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_20_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_20_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_20_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_23" name="15 Accounting Clerk" >
+      <ioSpecification>
+        <dataInput id="_23_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_23_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_23_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_23_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_22" name="14 Accounting Clerk" >
+      <ioSpecification>
+        <dataInput id="_22_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_22_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_22_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_22_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_25" name="17 Accounting Clerk" >
+      <ioSpecification>
+        <dataInput id="_25_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_25_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_25_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_25_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_24" name="16 Accounting Clerk" >
+      <ioSpecification>
+        <dataInput id="_24_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_24_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_24_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_24_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_27" name="19 General Accounting Manager" >
+      <ioSpecification>
+        <dataInput id="_27_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_27_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_27_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_27_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <userTask id="_26" name="18 Accounting Clerk" >
+      <ioSpecification>
+        <dataInput id="_26_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_26_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_26_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_26_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <endEvent id="_29" name="end-state1" />
+    <userTask id="_28" name="Processing Subledger Data to the General Ledger" >
+      <ioSpecification>
+        <dataInput id="_28_GroupIdInput" name="GroupId" />
+        <inputSet>
+          <dataInputRefs>_28_GroupIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_28_GroupIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{group}</from>
+          <to xsi:type="tFormalExpression">_28_GroupIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>#{actor}</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <exclusiveGateway id="_31" name="Gateway-4 Originator" gatewayDirection="Converging" />
+    <exclusiveGateway id="_30" name="Gateway-1 General Accounting Manager" gatewayDirection="Converging" />
+    <exclusiveGateway id="_34" name="Gateway-18 Accounting Clerk" gatewayDirection="Converging" />
+    <exclusiveGateway id="_32" name="Gateway-12 Controller" gatewayDirection="Converging" />
+    <exclusiveGateway id="_33" name="Gateway-17 Accounting Clerk" gatewayDirection="Converging" />
+
+    <!-- connections -->
+    <sequenceFlow id="_30-_2" sourceRef="_30" targetRef="_2" />
+    <sequenceFlow id="_2-_3" sourceRef="_2" targetRef="_3" />
+    <sequenceFlow id="_3-_4" sourceRef="_3" targetRef="_4" >
+      <conditionExpression xsi:type="tFormalExpression" ></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_3-_5" sourceRef="_3" targetRef="_5" >
+      <conditionExpression xsi:type="tFormalExpression" ></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_5-_6" sourceRef="_5" targetRef="_6" >
+      <conditionExpression xsi:type="tFormalExpression" ></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_6-_7" sourceRef="_6" targetRef="_7" >
+      <conditionExpression xsi:type="tFormalExpression" ></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_5-_8" sourceRef="_5" targetRef="_8" >
+      <conditionExpression xsi:type="tFormalExpression" ></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_8-_9" sourceRef="_8" targetRef="_9" />
+    <sequenceFlow id="_31-_10" sourceRef="_31" targetRef="_10" />
+    <sequenceFlow id="_10-_11" sourceRef="_10" targetRef="_11" />
+    <sequenceFlow id="_7-_12" sourceRef="_7" targetRef="_12" >
+      <conditionExpression xsi:type="tFormalExpression" ></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_12-_13" sourceRef="_12" targetRef="_13" />
+    <sequenceFlow id="_13-_14" sourceRef="_13" targetRef="_14" />
+    <sequenceFlow id="_14-_15" sourceRef="_14" targetRef="_15" >
+      <conditionExpression xsi:type="tFormalExpression" ></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_14-_17" sourceRef="_14" targetRef="_17" >
+      <conditionExpression xsi:type="tFormalExpression" ></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_15-_16" sourceRef="_15" targetRef="_16" />
+    <sequenceFlow id="_32-_19" sourceRef="_32" targetRef="_19" />
+    <sequenceFlow id="_17-_18" sourceRef="_17" targetRef="_18" />
+    <sequenceFlow id="_20-_21" sourceRef="_20" targetRef="_21" />
+    <sequenceFlow id="_19-_20" sourceRef="_19" targetRef="_20" />
+    <sequenceFlow id="_21-_23" sourceRef="_21" targetRef="_23" >
+      <conditionExpression xsi:type="tFormalExpression" ></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_21-_22" sourceRef="_21" targetRef="_22" >
+      <conditionExpression xsi:type="tFormalExpression" ></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_33-_25" sourceRef="_33" targetRef="_25" />
+    <sequenceFlow id="_23-_24" sourceRef="_23" targetRef="_24" />
+    <sequenceFlow id="_26-_27" sourceRef="_26" targetRef="_27" />
+    <sequenceFlow id="_34-_26" sourceRef="_34" targetRef="_26" />
+    <sequenceFlow id="_28-_29" sourceRef="_28" targetRef="_29" />
+    <sequenceFlow id="_27-_28" sourceRef="_27" targetRef="_28" />
+    <sequenceFlow id="_9-_31" sourceRef="_9" targetRef="_31" />
+    <sequenceFlow id="_16-_31" sourceRef="_16" targetRef="_31" />
+    <sequenceFlow id="_1-_30" sourceRef="_1" targetRef="_30" />
+    <sequenceFlow id="_4-_30" sourceRef="_4" targetRef="_30" />
+    <sequenceFlow id="_11-_30" sourceRef="_11" targetRef="_30" />
+    <sequenceFlow id="_6-_34" sourceRef="_6" targetRef="_34" >
+      <conditionExpression xsi:type="tFormalExpression" ></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_25-_34" sourceRef="_25" targetRef="_34" />
+    <sequenceFlow id="_7-_32" sourceRef="_7" targetRef="_32" >
+      <conditionExpression xsi:type="tFormalExpression" ></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_18-_32" sourceRef="_18" targetRef="_32" />
+    <sequenceFlow id="_22-_33" sourceRef="_22" targetRef="_33" />
+    <sequenceFlow id="_24-_33" sourceRef="_24" targetRef="_33" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="Accounting_Clerk_Processing_Manual_Journal_Entries" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="805" y="761" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="680" y="922" width="209" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="793" y="990" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="479" y="1071" width="348" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" >
+        <dc:Bounds x="685" y="16" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="292" y="97" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="292" y="178" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" >
+        <dc:Bounds x="526" y="97" width="323" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_9" >
+        <dc:Bounds x="505" y="178" width="320" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_10" >
+        <dc:Bounds x="599" y="693" width="132" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_11" >
+        <dc:Bounds x="558" y="761" width="215" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_12" >
+        <dc:Bounds x="343" y="259" width="279" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13" >
+        <dc:Bounds x="416" y="327" width="132" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_14" >
+        <dc:Bounds x="458" y="395" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_15" >
+        <dc:Bounds x="507" y="476" width="132" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_17" >
+        <dc:Bounds x="343" y="476" width="132" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_16" >
+        <dc:Bounds x="507" y="544" width="132" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19" >
+        <dc:Bounds x="250" y="693" width="132" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_18" >
+        <dc:Bounds x="343" y="544" width="132" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_21" >
+        <dc:Bounds x="292" y="841" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_20" >
+        <dc:Bounds x="212" y="761" width="208" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_23" >
+        <dc:Bounds x="212" y="922" width="209" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_22" >
+        <dc:Bounds x="453" y="922" width="174" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_25" >
+        <dc:Bounds x="212" y="1152" width="188" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_24" >
+        <dc:Bounds x="212" y="990" width="261" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_27" >
+        <dc:Bounds x="63" y="1369" width="245" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_26" >
+        <dc:Bounds x="74" y="1301" width="223" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_29" >
+        <dc:Bounds x="161" y="1505" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_28" >
+        <dc:Bounds x="16" y="1437" width="339" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_31" >
+        <dc:Bounds x="641" y="612" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_30" >
+        <dc:Bounds x="641" y="841" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_34" >
+        <dc:Bounds x="161" y="1220" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_32" >
+        <dc:Bounds x="292" y="612" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_33" >
+        <dc:Bounds x="388" y="1071" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_30-_2" >
+        <di:waypoint x="665" y="865" />
+        <di:waypoint x="784" y="940" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_3" >
+        <di:waypoint x="784" y="940" />
+        <di:waypoint x="817" y="1014" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_4" >
+        <di:waypoint x="817" y="1014" />
+        <di:waypoint x="653" y="1095" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_5" >
+        <di:waypoint x="817" y="1014" />
+        <di:waypoint x="709" y="40" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_6" >
+        <di:waypoint x="709" y="40" />
+        <di:waypoint x="316" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-_7" >
+        <di:waypoint x="316" y="121" />
+        <di:waypoint x="316" y="202" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_8" >
+        <di:waypoint x="709" y="40" />
+        <di:waypoint x="687" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_9" >
+        <di:waypoint x="687" y="121" />
+        <di:waypoint x="665" y="202" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_31-_10" >
+        <di:waypoint x="665" y="636" />
+        <di:waypoint x="665" y="711" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_10-_11" >
+        <di:waypoint x="665" y="711" />
+        <di:waypoint x="665" y="785" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_12" >
+        <di:waypoint x="316" y="202" />
+        <di:waypoint x="482" y="277" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_12-_13" >
+        <di:waypoint x="482" y="277" />
+        <di:waypoint x="482" y="345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-_14" >
+        <di:waypoint x="482" y="345" />
+        <di:waypoint x="482" y="419" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_14-_15" >
+        <di:waypoint x="482" y="419" />
+        <di:waypoint x="573" y="494" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_14-_17" >
+        <di:waypoint x="482" y="419" />
+        <di:waypoint x="409" y="494" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_15-_16" >
+        <di:waypoint x="573" y="494" />
+        <di:waypoint x="573" y="562" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_32-_19" >
+        <di:waypoint x="316" y="636" />
+        <di:waypoint x="316" y="711" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17-_18" >
+        <di:waypoint x="409" y="494" />
+        <di:waypoint x="409" y="562" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_20-_21" >
+        <di:waypoint x="316" y="785" />
+        <di:waypoint x="316" y="865" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-_20" >
+        <di:waypoint x="316" y="711" />
+        <di:waypoint x="316" y="785" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_21-_23" >
+        <di:waypoint x="316" y="865" />
+        <di:waypoint x="316" y="940" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_21-_22" >
+        <di:waypoint x="316" y="865" />
+        <di:waypoint x="540" y="940" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_33-_25" >
+        <di:waypoint x="412" y="1095" />
+        <di:waypoint x="306" y="1170" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_23-_24" >
+        <di:waypoint x="316" y="940" />
+        <di:waypoint x="342" y="1014" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_26-_27" >
+        <di:waypoint x="185" y="1319" />
+        <di:waypoint x="185" y="1387" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_34-_26" >
+        <di:waypoint x="185" y="1244" />
+        <di:waypoint x="185" y="1319" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_28-_29" >
+        <di:waypoint x="185" y="1455" />
+        <di:waypoint x="185" y="1529" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_27-_28" >
+        <di:waypoint x="185" y="1387" />
+        <di:waypoint x="185" y="1455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_9-_31" >
+        <di:waypoint x="665" y="202" />
+        <di:waypoint x="665" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_16-_31" >
+        <di:waypoint x="573" y="562" />
+        <di:waypoint x="665" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_30" >
+        <di:waypoint x="829" y="785" />
+        <di:waypoint x="665" y="865" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_4-_30" >
+        <di:waypoint x="653" y="1095" />
+        <di:waypoint x="665" y="865" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_11-_30" >
+        <di:waypoint x="665" y="785" />
+        <di:waypoint x="665" y="865" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-_34" >
+        <di:waypoint x="316" y="121" />
+        <di:waypoint x="185" y="1244" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_25-_34" >
+        <di:waypoint x="306" y="1170" />
+        <di:waypoint x="185" y="1244" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_32" >
+        <di:waypoint x="316" y="202" />
+        <di:waypoint x="316" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_18-_32" >
+        <di:waypoint x="409" y="562" />
+        <di:waypoint x="316" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_22-_33" >
+        <di:waypoint x="540" y="940" />
+        <di:waypoint x="412" y="1095" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_24-_33" >
+        <di:waypoint x="342" y="1014" />
+        <di:waypoint x="412" y="1095" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

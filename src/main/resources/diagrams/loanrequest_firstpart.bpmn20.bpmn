@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/bpmn2.0" id="taskAssigneeExample">
+  <process id="loanrequest" name="Process to handle a loan request" isExecutable="true">
+    <startEvent id="theStart"></startEvent>
+    <sequenceFlow id="sequenceFlow-dc22c7f8-f76a-41bd-842c-341b52efd289" sourceRef="theStart" targetRef="checkCredit"></sequenceFlow>
+    <scriptTask id="checkCredit" scriptFormat="groovy" activiti:autoStoreVariables="false">
+      <script>
+                out:println "Checking credit for " + name;
+                creditCheckOk = false;
+                if((income / 2) &gt; loanAmount) {
+                creditCheckOk = true;
+                }
+                out:println "Checked credit for " + name + " outcome is " + creditCheckOk;
+            </script>
+    </scriptTask>
+    <sequenceFlow id="sequenceFlow-8b6ce454-c40d-4447-84cd-536f482345e2" sourceRef="checkCredit" targetRef="createApplication"></sequenceFlow>
+    <serviceTask id="createApplication" activiti:class="org.bpmnwithactiviti.chapter5.CreateApplicationTask"></serviceTask>
+    <sequenceFlow id="sequenceFlow-9960c2a7-a144-4727-a8ae-10ff77a1a066" sourceRef="createApplication" targetRef="theEnd"></sequenceFlow>
+    <endEvent id="theEnd"></endEvent>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_loanrequest">
+    <bpmndi:BPMNPlane bpmnElement="loanrequest" id="BPMNPlane_loanrequest">
+      <bpmndi:BPMNShape bpmnElement="theStart" id="BPMNShape_theStart">
+        <omgdc:Bounds height="35.0" width="35.0" x="0.0" y="15.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="checkCredit" id="BPMNShape_checkCredit">
+        <omgdc:Bounds height="60.0" width="100.0" x="80.0" y="0.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="createApplication" id="BPMNShape_createApplication">
+        <omgdc:Bounds height="60.0" width="100.0" x="230.0" y="0.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="theEnd" id="BPMNShape_theEnd">
+        <omgdc:Bounds height="35.0" width="35.0" x="380.0" y="15.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlow-dc22c7f8-f76a-41bd-842c-341b52efd289" id="BPMNEdge_sequenceFlow-dc22c7f8-f76a-41bd-842c-341b52efd289">
+        <omgdi:waypoint x="35.0" y="32.0"></omgdi:waypoint>
+        <omgdi:waypoint x="42.0" y="30.0"></omgdi:waypoint>
+        <omgdi:waypoint x="42.0" y="30.0"></omgdi:waypoint>
+        <omgdi:waypoint x="80.0" y="30.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlow-8b6ce454-c40d-4447-84cd-536f482345e2" id="BPMNEdge_sequenceFlow-8b6ce454-c40d-4447-84cd-536f482345e2">
+        <omgdi:waypoint x="180.0" y="30.0"></omgdi:waypoint>
+        <omgdi:waypoint x="192.0" y="30.0"></omgdi:waypoint>
+        <omgdi:waypoint x="192.0" y="30.0"></omgdi:waypoint>
+        <omgdi:waypoint x="230.0" y="30.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlow-9960c2a7-a144-4727-a8ae-10ff77a1a066" id="BPMNEdge_sequenceFlow-9960c2a7-a144-4727-a8ae-10ff77a1a066">
+        <omgdi:waypoint x="330.0" y="30.0"></omgdi:waypoint>
+        <omgdi:waypoint x="342.0" y="30.0"></omgdi:waypoint>
+        <omgdi:waypoint x="342.0" y="30.0"></omgdi:waypoint>
+        <omgdi:waypoint x="380.0" y="32.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

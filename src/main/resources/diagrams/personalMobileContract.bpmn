@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.bpmnwithactiviti.org/personalmobilecontract">
+  <process id="personalMobileContract" name="Personal mobile contract" isExecutable="true">
+    <startEvent id="theStart">
+      <extensionElements>
+        <activiti:formProperty id="customerNumber" name="Customer number" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="contractType" name="Contract type" type="enum" required="true">
+          <activiti:value id="100min" name="100 minutes"></activiti:value>
+          <activiti:value id="200min" name="200 minutes"></activiti:value>
+          <activiti:value id="500min" name="500 minutes"></activiti:value>
+        </activiti:formProperty>
+      </extensionElements>
+    </startEvent>
+    <sequenceFlow id="sequenceFlow-326f869f-a7b4-45aa-886a-39918339550e" sourceRef="theStart" targetRef="creditCheck"></sequenceFlow>
+    <callActivity id="creditCheck" calledElement="creditCheckProcess">
+      <extensionElements>
+        <activiti:in source="customerNumber" target="customerID"></activiti:in>
+        <activiti:in source="contractType" target="contractType"></activiti:in>
+        <activiti:out source="creditCheckApproved" target="creditApproved"></activiti:out>
+      </extensionElements>
+    </callActivity>
+    <sequenceFlow id="sequenceFlow-1b9fded6-1c25-4540-b292-7b5e6a5496f2" sourceRef="creditCheck" targetRef="creditApproved"></sequenceFlow>
+    <exclusiveGateway id="creditApproved"></exclusiveGateway>
+    <sequenceFlow id="sequenceFlow-48213da3-a1d2-4e4a-b5cc-75962623dbd6" sourceRef="creditApproved" targetRef="sendMobileAgreement">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${creditApproved == true}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sequenceFlow-2a1ca712-5a1a-4a18-a24b-523253a63570" sourceRef="creditApproved" targetRef="sendDenial">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${creditApproved == false}]]></conditionExpression>
+    </sequenceFlow>
+    <userTask id="sendMobileAgreement" name="Send mobile contract" activiti:candidateGroups="sales"></userTask>
+    <sequenceFlow id="sequenceFlow-fb618589-d3b7-4b4b-aaa3-a47d2c37494e" sourceRef="sendMobileAgreement" targetRef="theEnd"></sequenceFlow>
+    <userTask id="sendDenial" name="Send letter of denial" activiti:candidateGroups="sales"></userTask>
+    <sequenceFlow id="sequenceFlow-59515930-17e5-4568-a258-bcbac130d1d2" sourceRef="sendMobileAgreement" targetRef="theEnd"></sequenceFlow>
+    <endEvent id="theEnd"></endEvent>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_personalMobileContract">
+    <bpmndi:BPMNPlane bpmnElement="personalMobileContract" id="BPMNPlane_personalMobileContract">
+      <bpmndi:BPMNShape bpmnElement="theStart" id="BPMNShape_theStart">
+        <omgdc:Bounds height="35.0" width="35.0" x="0.0" y="95.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="creditCheck" id="BPMNShape_creditCheck">
+        <omgdc:Bounds height="60.0" width="100.0" x="80.0" y="80.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="creditApproved" id="BPMNShape_creditApproved">
+        <omgdc:Bounds height="40.0" width="40.0" x="230.0" y="90.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sendMobileAgreement" id="BPMNShape_sendMobileAgreement">
+        <omgdc:Bounds height="60.0" width="100.0" x="320.0" y="0.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sendDenial" id="BPMNShape_sendDenial">
+        <omgdc:Bounds height="60.0" width="100.0" x="320.0" y="160.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="theEnd" id="BPMNShape_theEnd">
+        <omgdc:Bounds height="35.0" width="35.0" x="470.0" y="15.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlow-326f869f-a7b4-45aa-886a-39918339550e" id="BPMNEdge_sequenceFlow-326f869f-a7b4-45aa-886a-39918339550e">
+        <omgdi:waypoint x="35.0" y="112.0"></omgdi:waypoint>
+        <omgdi:waypoint x="80.0" y="110.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlow-1b9fded6-1c25-4540-b292-7b5e6a5496f2" id="BPMNEdge_sequenceFlow-1b9fded6-1c25-4540-b292-7b5e6a5496f2">
+        <omgdi:waypoint x="180.0" y="110.0"></omgdi:waypoint>
+        <omgdi:waypoint x="230.0" y="110.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlow-48213da3-a1d2-4e4a-b5cc-75962623dbd6" id="BPMNEdge_sequenceFlow-48213da3-a1d2-4e4a-b5cc-75962623dbd6">
+        <omgdi:waypoint x="270.0" y="110.0"></omgdi:waypoint>
+        <omgdi:waypoint x="282.0" y="110.0"></omgdi:waypoint>
+        <omgdi:waypoint x="282.0" y="30.0"></omgdi:waypoint>
+        <omgdi:waypoint x="320.0" y="30.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlow-2a1ca712-5a1a-4a18-a24b-523253a63570" id="BPMNEdge_sequenceFlow-2a1ca712-5a1a-4a18-a24b-523253a63570">
+        <omgdi:waypoint x="270.0" y="110.0"></omgdi:waypoint>
+        <omgdi:waypoint x="282.0" y="110.0"></omgdi:waypoint>
+        <omgdi:waypoint x="282.0" y="190.0"></omgdi:waypoint>
+        <omgdi:waypoint x="320.0" y="190.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlow-fb618589-d3b7-4b4b-aaa3-a47d2c37494e" id="BPMNEdge_sequenceFlow-fb618589-d3b7-4b4b-aaa3-a47d2c37494e">
+        <omgdi:waypoint x="420.0" y="30.0"></omgdi:waypoint>
+        <omgdi:waypoint x="432.0" y="17.0"></omgdi:waypoint>
+        <omgdi:waypoint x="432.0" y="30.0"></omgdi:waypoint>
+        <omgdi:waypoint x="470.0" y="32.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlow-59515930-17e5-4568-a258-bcbac130d1d2" id="BPMNEdge_sequenceFlow-59515930-17e5-4568-a258-bcbac130d1d2">
+        <omgdi:waypoint x="420.0" y="30.0"></omgdi:waypoint>
+        <omgdi:waypoint x="432.0" y="42.0"></omgdi:waypoint>
+        <omgdi:waypoint x="432.0" y="30.0"></omgdi:waypoint>
+        <omgdi:waypoint x="470.0" y="32.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

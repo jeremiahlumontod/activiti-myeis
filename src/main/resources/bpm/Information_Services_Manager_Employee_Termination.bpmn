@@ -1,0 +1,1807 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:g="http://www.jboss.org/drools/flow/gpd" xmlns:tns="http://www.jboss.org/drools" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.mvel.org/2.0" id="Definition" targetNamespace="http://www.jboss.org/drools" typeLanguage="http://www.java.com/javaTypes" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+
+  
+
+  
+
+
+	
+
+	
+
+	
+<process id="Information_Services_Manager_Employee_Termination" isExecutable="true" name="Information_Services_Manager_Employee_Termination" processType="Private" tns:packageName="Information_Services_Manager_Employee_Termination">
+		<startEvent id="_1" name="start-state1"/>
+		<userTask id="_2" name="External process 1 - Employee Performance Corrective Action">
+			<ioSpecification>
+				<dataInput id="_2_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_2_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_2_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_2_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_3" name="Staff Reduction and Outplacement">
+			<ioSpecification>
+				<dataInput id="_3_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_3_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_3_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_3_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_4" name="1 Manager">
+			<ioSpecification>
+				<dataInput id="_4_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_4_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_4_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_4_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_6" name="2 Manager">
+			<ioSpecification>
+				<dataInput id="_6_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_6_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_6_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_6_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_10" name="3 Manager and Human Resources Representative">
+			<ioSpecification>
+				<dataInput id="_10_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_10_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_10_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_10_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_12" name="4 Manager and Human Resources Representative">
+			<ioSpecification>
+				<dataInput id="_12_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_12_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_12_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_12_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_14" name="5 Manager and Human Resources Representative">
+			<ioSpecification>
+				<dataInput id="_14_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_14_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_14_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_14_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_15" name="6 Manager">
+			<ioSpecification>
+				<dataInput id="_15_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_15_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_15_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_15_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_17" name="7 Manager">
+			<ioSpecification>
+				<dataInput id="_17_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_17_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_17_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_17_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_18" name="8 Manager and Human Resources Representative">
+			<ioSpecification>
+				<dataInput id="_18_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_18_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_18_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_18_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_20" name="9 Manager and Human Resources Representative">
+			<ioSpecification>
+				<dataInput id="_20_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_20_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_20_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_20_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_21" name="External process 2 - Employee Performance Corrective Action">
+			<ioSpecification>
+				<dataInput id="_21_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_21_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_21_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_21_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_22" name="10 Manager and Human Resources Representative">
+			<ioSpecification>
+				<dataInput id="_22_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_22_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_22_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_22_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_24" name="11 Manager">
+			<ioSpecification>
+				<dataInput id="_24_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_24_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_24_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_24_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_25" name="12 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_25_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_25_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_25_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_25_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_26" name="Employee Performance Corrective Action2">
+			<ioSpecification>
+				<dataInput id="_26_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_26_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_26_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_26_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_27" name="13 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_27_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_27_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_27_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_27_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_29" name="14 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_29_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_29_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_29_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_29_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_32" name="15 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_32_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_32_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_32_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_32_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_33" name="16 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_33_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_33_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_33_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_33_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_35" name="17 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_35_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_35_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_35_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_35_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_36" name="18 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_36_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_36_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_36_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_36_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_37" name="19 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_37_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_37_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_37_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_37_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_38" name="20 Human Resources Manager">
+			<ioSpecification>
+				<dataInput id="_38_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_38_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_38_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_38_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_39" name="21 Human Resources Manager">
+			<ioSpecification>
+				<dataInput id="_39_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_39_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_39_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_39_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_40" name="22 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_40_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_40_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_40_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_40_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_41" name="23 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_41_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_41_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_41_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_41_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_42" name="24 Accounting Clerk">
+			<ioSpecification>
+				<dataInput id="_42_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_42_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_42_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_42_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_43" name="25 Accounting Clerk">
+			<ioSpecification>
+				<dataInput id="_43_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_43_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_43_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_43_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_44" name="26 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_44_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_44_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_44_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_44_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_45" name="27 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_45_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_45_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_45_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_45_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_46" name="28 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_46_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_46_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_46_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_46_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_48" name="29 Manager and Human Resources Representative">
+			<ioSpecification>
+				<dataInput id="_48_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_48_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_48_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_48_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_49" name="30 Manager and Human Resources Representative">
+			<ioSpecification>
+				<dataInput id="_49_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_49_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_49_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_49_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_50" name="31 Manager and Human Resources Representative">
+			<ioSpecification>
+				<dataInput id="_50_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_50_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_50_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_50_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_51" name="32 Human Resources Representative">
+			<ioSpecification>
+				<dataInput id="_51_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_51_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_51_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_51_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_52" name="33 Human Resources Representative">
+			<ioSpecification>
+				<dataInput id="_52_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_52_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_52_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_52_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_53" name="34 Human Resources Representative">
+			<ioSpecification>
+				<dataInput id="_53_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_53_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_53_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_53_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_54" name="35 Human Resources Representative">
+			<ioSpecification>
+				<dataInput id="_54_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_54_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_54_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_54_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_55" name="36 Human Resources Representative">
+			<ioSpecification>
+				<dataInput id="_55_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_55_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_55_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_55_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_56" name="37 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_56_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_56_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_56_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_56_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_57" name="38 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_57_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_57_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_57_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_57_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_58" name="39 Information Services Manager">
+			<ioSpecification>
+				<dataInput id="_58_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_58_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_58_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_58_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_59" name="40 Information Services Manager">
+			<ioSpecification>
+				<dataInput id="_59_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_59_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_59_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_59_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_60" name="41 Security Manager">
+			<ioSpecification>
+				<dataInput id="_60_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_60_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_60_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_60_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_61" name="42 Security Manager">
+			<ioSpecification>
+				<dataInput id="_61_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_61_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_61_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_61_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_62" name="43 Benefits Analyst">
+			<ioSpecification>
+				<dataInput id="_62_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_62_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_62_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_62_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_63" name="44 Human Resources Specialist">
+			<ioSpecification>
+				<dataInput id="_63_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_63_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_63_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_63_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_64" name="COBRA Administration">
+			<ioSpecification>
+				<dataInput id="_64_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_64_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_64_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_64_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<userTask id="_65" name="Initiating Personnel Requisitions">
+			<ioSpecification>
+				<dataInput id="_65_GroupIdInput" name="GroupId"/>
+				<inputSet>
+					<dataInputRefs>_65_GroupIdInput</dataInputRefs>
+				</inputSet>
+				<outputSet/>
+			</ioSpecification>
+			<dataInputAssociation>
+				<targetRef>_65_GroupIdInput</targetRef>
+				<assignment>
+					<from type="tFormalExpression">#{group}</from>
+					<to type="tFormalExpression">_65_GroupIdInput</to>
+				</assignment>
+			</dataInputAssociation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>#{actor}</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		<endEvent id="_66" name="end-state1"/>
+		<exclusiveGateway gatewayDirection="Diverging" id="_5" name="resignation or job abandonment"/>
+		<exclusiveGateway gatewayDirection="Diverging" id="_7" name="manager wants to terminate for cause"/>
+		<exclusiveGateway gatewayDirection="Diverging" id="_8" name="part of a reduction in force"/>
+		<exclusiveGateway gatewayDirection="Diverging" id="_9" name="resignation"/>
+		<exclusiveGateway gatewayDirection="Diverging" id="_11" name="maintaining the employee is desired"/>
+		<exclusiveGateway gatewayDirection="Diverging" id="_13" name="company will try to maintain the employee"/>
+		<exclusiveGateway gatewayDirection="Diverging" id="_16" name="employee rejects counter offer"/>
+		<exclusiveGateway gatewayDirection="Diverging" id="_19" name="documentation supports a recommendation to terminate"/>
+		<exclusiveGateway gatewayDirection="Diverging" id="_23" name="termination is approved"/>
+		<exclusiveGateway gatewayDirection="Diverging" id="_28" name="there is indebtedness and this is a voluntary resignation or job abandonment"/>
+		<exclusiveGateway gatewayDirection="Diverging" id="_30" name="there is indebtedness and this is an involuntary termination"/>
+		<exclusiveGateway gatewayDirection="Diverging" id="_31" name="there is no indebtedness"/>
+		<exclusiveGateway gatewayDirection="Diverging" id="_34" name="the employee signs the authorization"/>
+		<exclusiveGateway gatewayDirection="Diverging" id="_47" name="termination is voluntary or job abandonment"/>
+		<exclusiveGateway gatewayDirection="Converging" id="_67" name="Gateway-2 Manager"/>
+		<exclusiveGateway gatewayDirection="Converging" id="_68" name="Gateway-7 Manager"/>
+		<exclusiveGateway gatewayDirection="Converging" id="_69" name="Gateway-8 Manager and Human Resources Representative"/>
+		<exclusiveGateway gatewayDirection="Converging" id="_70" name="Gateway-12 Human Resources Specialist"/>
+		<exclusiveGateway gatewayDirection="Converging" id="_71" name="Gateway-14 Human Resources Specialist"/>
+		<exclusiveGateway gatewayDirection="Converging" id="_72" name="Gateway-19 Human Resources Specialist"/>
+		<exclusiveGateway gatewayDirection="Converging" id="_73" name="Gateway-34 Human Resources Representative"/>
+		<exclusiveGateway gatewayDirection="Converging" id="_74" name="Gateway-end-state1"/>
+		<sequenceFlow id="_1-_2" sourceRef="_1" targetRef="_2"/>
+		<sequenceFlow id="_2-_3" sourceRef="_2" targetRef="_3"/>
+		<sequenceFlow id="_3-_4" sourceRef="_3" targetRef="_4"/>
+		<sequenceFlow id="_4-_5" sourceRef="_4" targetRef="_5"/>
+		<sequenceFlow id="_5-_67" sourceRef="_5" targetRef="_67">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_8-_67" sourceRef="_8" targetRef="_67">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_67-_6" sourceRef="_67" targetRef="_6"/>
+		<sequenceFlow id="_5-_7" sourceRef="_5" targetRef="_7">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_7-_8" sourceRef="_7" targetRef="_8">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_6-_9" sourceRef="_6" targetRef="_9"/>
+		<sequenceFlow id="_9-_10" sourceRef="_9" targetRef="_10">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_10-_11" sourceRef="_10" targetRef="_11"/>
+		<sequenceFlow id="_11-_12" sourceRef="_11" targetRef="_12">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_12-_13" sourceRef="_12" targetRef="_13"/>
+		<sequenceFlow id="_13-_14" sourceRef="_13" targetRef="_14">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_14-_15" sourceRef="_14" targetRef="_15"/>
+		<sequenceFlow id="_15-_16" sourceRef="_15" targetRef="_16"/>
+		<sequenceFlow id="_9-_68" sourceRef="_9" targetRef="_68">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_11-_68" sourceRef="_11" targetRef="_68">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_13-_68" sourceRef="_13" targetRef="_68">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_16-_68" sourceRef="_16" targetRef="_68">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_68-_17" sourceRef="_68" targetRef="_17"/>
+		<sequenceFlow id="_7-_69" sourceRef="_7" targetRef="_69">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_17-_69" sourceRef="_17" targetRef="_69"/>
+		<sequenceFlow id="_69-_18" sourceRef="_69" targetRef="_18"/>
+		<sequenceFlow id="_18-_19" sourceRef="_18" targetRef="_19"/>
+		<sequenceFlow id="_19-_20" sourceRef="_19" targetRef="_20">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_19-_21" sourceRef="_19" targetRef="_21">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_20-_22" sourceRef="_20" targetRef="_22"/>
+		<sequenceFlow id="_22-_23" sourceRef="_22" targetRef="_23"/>
+		<sequenceFlow id="_23-_24" sourceRef="_23" targetRef="_24">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_8-_70" sourceRef="_8" targetRef="_70">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_24-_70" sourceRef="_24" targetRef="_70"/>
+		<sequenceFlow id="_70-_25" sourceRef="_70" targetRef="_25"/>
+		<sequenceFlow id="_23-_26" sourceRef="_23" targetRef="_26">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_25-_27" sourceRef="_25" targetRef="_27"/>
+		<sequenceFlow id="_27-_28" sourceRef="_27" targetRef="_28"/>
+		<sequenceFlow id="_28-_71" sourceRef="_28" targetRef="_71">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_31-_71" sourceRef="_31" targetRef="_71">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_71-_29" sourceRef="_71" targetRef="_29"/>
+		<sequenceFlow id="_28-_30" sourceRef="_28" targetRef="_30">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_30-_31" sourceRef="_30" targetRef="_31">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_29-_32" sourceRef="_29" targetRef="_32"/>
+		<sequenceFlow id="_32-_33" sourceRef="_32" targetRef="_33"/>
+		<sequenceFlow id="_33-_34" sourceRef="_33" targetRef="_34"/>
+		<sequenceFlow id="_34-_35" sourceRef="_34" targetRef="_35">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_30-_36" sourceRef="_30" targetRef="_36">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_31-_72" sourceRef="_31" targetRef="_72">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_34-_72" sourceRef="_34" targetRef="_72">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_35-_72" sourceRef="_35" targetRef="_72"/>
+		<sequenceFlow id="_36-_72" sourceRef="_36" targetRef="_72"/>
+		<sequenceFlow id="_72-_37" sourceRef="_72" targetRef="_37"/>
+		<sequenceFlow id="_37-_38" sourceRef="_37" targetRef="_38"/>
+		<sequenceFlow id="_38-_39" sourceRef="_38" targetRef="_39"/>
+		<sequenceFlow id="_39-_40" sourceRef="_39" targetRef="_40"/>
+		<sequenceFlow id="_40-_41" sourceRef="_40" targetRef="_41"/>
+		<sequenceFlow id="_41-_42" sourceRef="_41" targetRef="_42"/>
+		<sequenceFlow id="_42-_43" sourceRef="_42" targetRef="_43"/>
+		<sequenceFlow id="_43-_44" sourceRef="_43" targetRef="_44"/>
+		<sequenceFlow id="_44-_45" sourceRef="_44" targetRef="_45"/>
+		<sequenceFlow id="_45-_46" sourceRef="_45" targetRef="_46"/>
+		<sequenceFlow id="_46-_47" sourceRef="_46" targetRef="_47"/>
+		<sequenceFlow id="_47-_48" sourceRef="_47" targetRef="_48">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_48-_49" sourceRef="_48" targetRef="_49"/>
+		<sequenceFlow id="_47-_50" sourceRef="_47" targetRef="_50">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_50-_51" sourceRef="_50" targetRef="_51"/>
+		<sequenceFlow id="_51-_52" sourceRef="_51" targetRef="_52"/>
+		<sequenceFlow id="_49-_73" sourceRef="_49" targetRef="_73"/>
+		<sequenceFlow id="_52-_73" sourceRef="_52" targetRef="_73"/>
+		<sequenceFlow id="_73-_53" sourceRef="_73" targetRef="_53"/>
+		<sequenceFlow id="_53-_54" sourceRef="_53" targetRef="_54"/>
+		<sequenceFlow id="_54-_55" sourceRef="_54" targetRef="_55"/>
+		<sequenceFlow id="_55-_56" sourceRef="_55" targetRef="_56"/>
+		<sequenceFlow id="_56-_57" sourceRef="_56" targetRef="_57"/>
+		<sequenceFlow id="_57-_58" sourceRef="_57" targetRef="_58"/>
+		<sequenceFlow id="_58-_59" sourceRef="_58" targetRef="_59"/>
+		<sequenceFlow id="_59-_60" sourceRef="_59" targetRef="_60"/>
+		<sequenceFlow id="_60-_61" sourceRef="_60" targetRef="_61"/>
+		<sequenceFlow id="_61-_62" sourceRef="_61" targetRef="_62"/>
+		<sequenceFlow id="_62-_63" sourceRef="_62" targetRef="_63"/>
+		<sequenceFlow id="_63-_64" sourceRef="_63" targetRef="_64"/>
+		<sequenceFlow id="_64-_65" sourceRef="_64" targetRef="_65"/>
+		<sequenceFlow id="_16-_74" sourceRef="_16" targetRef="_74">
+			<conditionExpression type="tFormalExpression"/>
+		</sequenceFlow>
+		<sequenceFlow id="_21-_74" sourceRef="_21" targetRef="_74"/>
+		<sequenceFlow id="_26-_74" sourceRef="_26" targetRef="_74"/>
+		<sequenceFlow id="_65-_74" sourceRef="_65" targetRef="_74"/>
+		<sequenceFlow id="_74-_66" sourceRef="_74" targetRef="_66"/>
+	</process>
+	<BPMNDiagram xmlns="http://www.omg.org/spec/BPMN/20100524/DI">
+		<BPMNPlane bpmnElement="Information_Services_Manager_Employee_Termination">
+			<BPMNShape bpmnElement="_1">
+				<Bounds height="36" width="132" x="218" y="14" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_2">
+				<Bounds height="36" width="380" x="103" y="84" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_3">
+				<Bounds height="36" width="264" x="192" y="163" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_4">
+				<Bounds height="36" width="208" x="200" y="247" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_5">
+				<Bounds height="36" width="263" x="191" y="327" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_6">
+				<Bounds height="36" width="237" x="554" y="325" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_7">
+				<Bounds height="36" width="254" x="188" y="412" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_8">
+				<Bounds height="36" width="233" x="198" y="495" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_9">
+				<Bounds height="36" width="132" x="587" y="404" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_10">
+				<Bounds height="36" width="328" x="811" y="408" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_11">
+				<Bounds height="36" width="270" x="812" y="493" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_12">
+				<Bounds height="36" width="334" x="1190" y="487" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_13">
+				<Bounds height="36" width="288" x="1183" y="562" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_14">
+				<Bounds height="36" width="295" x="1593" y="561" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_15">
+				<Bounds height="36" width="283" x="1604" y="634" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_16">
+				<Bounds height="36" width="260" x="1615" y="708" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_17">
+				<Bounds height="36" width="246" x="1625" y="778" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_18">
+				<Bounds height="36" width="339" x="1582" y="857" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_19">
+				<Bounds height="36" width="400" x="1521" y="926" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_20">
+				<Bounds height="36" width="453" x="2079" y="923" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_21">
+				<Bounds height="36" width="388" x="1549" y="1012" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_22">
+				<Bounds height="36" width="420" x="2086" y="1001" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_23">
+				<Bounds height="36" width="218" x="2194" y="1070" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_24">
+				<Bounds height="36" width="132" x="2497" y="1073" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_25">
+				<Bounds height="36" width="301" x="2417" y="1148" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_26">
+				<Bounds height="36" width="327" x="2027" y="1145" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_27">
+				<Bounds height="36" width="316" x="2421" y="1231" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_28">
+				<Bounds height="36" width="464" x="2327" y="1320" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_29">
+				<Bounds height="36" width="300" x="2868" y="1323" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_30">
+				<Bounds height="36" width="398" x="2341" y="1414" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_31">
+				<Bounds height="36" width="236" x="2414" y="1518" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_32">
+				<Bounds height="36" width="250" x="2872" y="1397" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_33">
+				<Bounds height="36" width="283" x="2874" y="1472" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_34">
+				<Bounds height="36" width="286" x="2884" y="1544" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_35">
+				<Bounds height="36" width="264" x="3260" y="1545" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_36">
+				<Bounds height="36" width="286" x="3257" y="1614" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_37">
+				<Bounds height="36" width="309" x="3252" y="1686" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_38">
+				<Bounds height="36" width="223" x="3289" y="1756" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_39">
+				<Bounds height="36" width="262" x="3270" y="1837" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_40">
+				<Bounds height="36" width="274" x="3258" y="1924" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_41">
+				<Bounds height="36" width="235" x="3273" y="2023" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_42">
+				<Bounds height="36" width="244" x="3259" y="2123" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_43">
+				<Bounds height="36" width="216" x="3289" y="2220" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_44">
+				<Bounds height="36" width="249" x="3281" y="2330" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_45">
+				<Bounds height="36" width="272" x="3240" y="2411" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_46">
+				<Bounds height="36" width="270" x="3230" y="2514" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_47">
+				<Bounds height="36" width="287" x="3218" y="2605" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_48">
+				<Bounds height="36" width="338" x="3593" y="2605" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_49">
+				<Bounds height="36" width="350" x="3500" y="2712" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_50">
+				<Bounds height="36" width="379" x="3489" y="2801" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_51">
+				<Bounds height="36" width="363" x="3513" y="2882" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_52">
+				<Bounds height="36" width="316" x="3502" y="2970" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_53">
+				<Bounds height="36" width="411" x="3440" y="3049" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_54">
+				<Bounds height="36" width="312" x="3496" y="3133" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_55">
+				<Bounds height="36" width="329" x="3484" y="3212" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_56">
+				<Bounds height="36" width="342" x="3465" y="3286" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_57">
+				<Bounds height="36" width="350" x="3470" y="3365" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_58">
+				<Bounds height="36" width="253" x="3545" y="3444" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_59">
+				<Bounds height="36" width="339" x="3493" y="3539" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_60">
+				<Bounds height="36" width="309" x="3497" y="3622" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_61">
+				<Bounds height="36" width="266" x="3503" y="3710" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_62">
+				<Bounds height="36" width="311" x="3468" y="3794" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_63">
+				<Bounds height="36" width="307" x="3492" y="3882" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_64">
+				<Bounds height="36" width="241" x="3483" y="3993" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_65">
+				<Bounds height="36" width="317" x="3449" y="4088" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_66">
+				<Bounds height="36" width="132" x="3025" y="4148" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_67">
+				<Bounds height="48" width="48" x="554" y="325" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_68">
+				<Bounds height="48" width="48" x="1625" y="778" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_69">
+				<Bounds height="48" width="48" x="1582" y="857" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_70">
+				<Bounds height="48" width="48" x="2417" y="1148" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_71">
+				<Bounds height="48" width="48" x="2868" y="1323" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_72">
+				<Bounds height="48" width="48" x="3252" y="1686" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_73">
+				<Bounds height="48" width="48" x="3440" y="3049" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNShape bpmnElement="_74">
+				<Bounds height="48" width="48" x="3025" y="4148" xmlns="http://www.omg.org/spec/DD/20100524/DC"/>
+			</BPMNShape>
+			<BPMNEdge bpmnElement="_1-_2">
+				<waypoint x="284" y="284" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="293" y="293" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_2-_3">
+				<waypoint x="293" y="293" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="324" y="324" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_3-_4">
+				<waypoint x="324" y="324" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="304" y="304" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_4-_5">
+				<waypoint x="304" y="304" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="322" y="322" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_5-_67">
+				<waypoint x="322" y="322" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="578" y="578" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_8-_67">
+				<waypoint x="314" y="314" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="578" y="578" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_67-_6">
+				<waypoint x="578" y="578" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="672" y="672" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_5-_7">
+				<waypoint x="322" y="322" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="315" y="315" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_7-_8">
+				<waypoint x="315" y="315" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="314" y="314" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_6-_9">
+				<waypoint x="672" y="672" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="653" y="653" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_9-_10">
+				<waypoint x="653" y="653" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="975" y="975" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_10-_11">
+				<waypoint x="975" y="975" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="947" y="947" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_11-_12">
+				<waypoint x="947" y="947" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1357" y="1357" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_12-_13">
+				<waypoint x="1357" y="1357" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1327" y="1327" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_13-_14">
+				<waypoint x="1327" y="1327" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1740" y="1740" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_14-_15">
+				<waypoint x="1740" y="1740" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1745" y="1745" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_15-_16">
+				<waypoint x="1745" y="1745" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1745" y="1745" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_9-_68">
+				<waypoint x="653" y="653" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1649" y="1649" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_11-_68">
+				<waypoint x="947" y="947" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1649" y="1649" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_13-_68">
+				<waypoint x="1327" y="1327" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1649" y="1649" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_16-_68">
+				<waypoint x="1745" y="1745" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1649" y="1649" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_68-_17">
+				<waypoint x="1649" y="1649" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1748" y="1748" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_7-_69">
+				<waypoint x="315" y="315" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1606" y="1606" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_17-_69">
+				<waypoint x="1748" y="1748" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1606" y="1606" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_69-_18">
+				<waypoint x="1606" y="1606" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1751" y="1751" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_18-_19">
+				<waypoint x="1751" y="1751" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1721" y="1721" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_19-_20">
+				<waypoint x="1721" y="1721" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2305" y="2305" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_19-_21">
+				<waypoint x="1721" y="1721" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="1743" y="1743" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_20-_22">
+				<waypoint x="2305" y="2305" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2296" y="2296" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_22-_23">
+				<waypoint x="2296" y="2296" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2303" y="2303" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_23-_24">
+				<waypoint x="2303" y="2303" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2563" y="2563" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_8-_70">
+				<waypoint x="314" y="314" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2441" y="2441" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_24-_70">
+				<waypoint x="2563" y="2563" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2441" y="2441" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_70-_25">
+				<waypoint x="2441" y="2441" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2567" y="2567" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_23-_26">
+				<waypoint x="2303" y="2303" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2190" y="2190" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_25-_27">
+				<waypoint x="2567" y="2567" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2579" y="2579" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_27-_28">
+				<waypoint x="2579" y="2579" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2559" y="2559" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_28-_71">
+				<waypoint x="2559" y="2559" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2892" y="2892" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_31-_71">
+				<waypoint x="2532" y="2532" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2892" y="2892" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_71-_29">
+				<waypoint x="2892" y="2892" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3018" y="3018" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_28-_30">
+				<waypoint x="2559" y="2559" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2540" y="2540" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_30-_31">
+				<waypoint x="2540" y="2540" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2532" y="2532" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_29-_32">
+				<waypoint x="3018" y="3018" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="2997" y="2997" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_32-_33">
+				<waypoint x="2997" y="2997" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3015" y="3015" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_33-_34">
+				<waypoint x="3015" y="3015" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3027" y="3027" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_34-_35">
+				<waypoint x="3027" y="3027" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3392" y="3392" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_30-_36">
+				<waypoint x="2540" y="2540" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3400" y="3400" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_31-_72">
+				<waypoint x="2532" y="2532" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3276" y="3276" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_34-_72">
+				<waypoint x="3027" y="3027" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3276" y="3276" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_35-_72">
+				<waypoint x="3392" y="3392" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3276" y="3276" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_36-_72">
+				<waypoint x="3400" y="3400" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3276" y="3276" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_72-_37">
+				<waypoint x="3276" y="3276" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3406" y="3406" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_37-_38">
+				<waypoint x="3406" y="3406" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3400" y="3400" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_38-_39">
+				<waypoint x="3400" y="3400" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3401" y="3401" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_39-_40">
+				<waypoint x="3401" y="3401" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3395" y="3395" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_40-_41">
+				<waypoint x="3395" y="3395" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3390" y="3390" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_41-_42">
+				<waypoint x="3390" y="3390" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3381" y="3381" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_42-_43">
+				<waypoint x="3381" y="3381" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3397" y="3397" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_43-_44">
+				<waypoint x="3397" y="3397" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3405" y="3405" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_44-_45">
+				<waypoint x="3405" y="3405" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3376" y="3376" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_45-_46">
+				<waypoint x="3376" y="3376" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3365" y="3365" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_46-_47">
+				<waypoint x="3365" y="3365" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3361" y="3361" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_47-_48">
+				<waypoint x="3361" y="3361" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3762" y="3762" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_48-_49">
+				<waypoint x="3762" y="3762" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3675" y="3675" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_47-_50">
+				<waypoint x="3361" y="3361" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3678" y="3678" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_50-_51">
+				<waypoint x="3678" y="3678" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3694" y="3694" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_51-_52">
+				<waypoint x="3694" y="3694" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3660" y="3660" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_49-_73">
+				<waypoint x="3675" y="3675" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3464" y="3464" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_52-_73">
+				<waypoint x="3660" y="3660" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3464" y="3464" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_73-_53">
+				<waypoint x="3464" y="3464" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3645" y="3645" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_53-_54">
+				<waypoint x="3645" y="3645" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3652" y="3652" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_54-_55">
+				<waypoint x="3652" y="3652" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3648" y="3648" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_55-_56">
+				<waypoint x="3648" y="3648" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3636" y="3636" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_56-_57">
+				<waypoint x="3636" y="3636" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3645" y="3645" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_57-_58">
+				<waypoint x="3645" y="3645" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3671" y="3671" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_58-_59">
+				<waypoint x="3671" y="3671" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3662" y="3662" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_59-_60">
+				<waypoint x="3662" y="3662" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3651" y="3651" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_60-_61">
+				<waypoint x="3651" y="3651" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3636" y="3636" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_61-_62">
+				<waypoint x="3636" y="3636" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3623" y="3623" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_62-_63">
+				<waypoint x="3623" y="3623" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3645" y="3645" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_63-_64">
+				<waypoint x="3645" y="3645" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3603" y="3603" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_64-_65">
+				<waypoint x="3603" y="3603" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3607" y="3607" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_16-_74">
+				<waypoint x="1745" y="1745" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3049" y="3049" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_21-_74">
+				<waypoint x="1743" y="1743" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3049" y="3049" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_26-_74">
+				<waypoint x="2190" y="2190" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3049" y="3049" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_65-_74">
+				<waypoint x="3607" y="3607" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3049" y="3049" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+			<BPMNEdge bpmnElement="_74-_66">
+				<waypoint x="3049" y="3049" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+				<waypoint x="3091" y="3091" xmlns="http://www.omg.org/spec/DD/20100524/DI"/>
+			</BPMNEdge>
+		</BPMNPlane>
+	</BPMNDiagram>
+</definitions>
